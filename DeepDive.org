@@ -1,0 +1,9 @@
+A great idea is to create the tags file for the Python code base with ~find .
+-type f -iname "*.[ch]" | etags -~ in the base of the directory.
+
+
+The function that is called when Python is started from the command line is
+[[file:Programs/python.c::main(int%20argc,%20char%20**argv)][here]]. This function does not do much, obviously, and hands over the
+responsibility to the [[file:Modules/main.c::_Py_UnixMain(int%20argc,%20char%20**argv)][_Py_UnixMain]] function.
+
+* TODO How is the file loaded?
